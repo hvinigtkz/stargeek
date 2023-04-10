@@ -1,0 +1,124 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "i f";
+    background: linear-gradient(180deg, #D9D9D9 62.5%, #548CA7 87.5%);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: i;
+    border-right: 3px solid black;
+    row-gap: 30px;
+}
+
+main >img{
+    width: 80%;
+}
+
+
+aside{
+    grid-area: f;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    row-gap: 15px;
+    margin-top: 120px;
+}
+
+form > input {
+    border-radius: 10px;
+}
+
+
+
+form > label{
+    font-size: 1rem;
+}
+
+.frame1{
+    background-image: url(imagens/Frame\ 1.png);
+    background-color: blue;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+main > img{
+    margin-top: 80px;
+}
+
+form > input[type="submit"]{
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 100px;
+    margin: 20px auto;
+    box-shadow: gray 3px 3px 6px;
+ }
+
+header > a > i{
+    font-size: 3rem;
+    color: black;
+    margin: 0 auto;
+   
+}
+
+@media screen and (max-width: 800px){
+    .container{
+       
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "i"
+        "f";
+        background: linear-gradient(180deg, #D9D9D9 62.5%, #548CA7 87.5%);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    main >img{
+        width: 50%;
+        margin-top: 10px;
+    }
+    aside img{
+        width: 50%;
+    }
+
+    form{
+       
+        margin-top: 10px;
+    }
+    
+    .frame1{
+        visibility: hidden;
+    }
+}
