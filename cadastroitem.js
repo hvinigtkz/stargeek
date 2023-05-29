@@ -3,13 +3,8 @@ const descricao = document.getElementById("descricao");
 const btn1 = document.getElementById("btn1");
 
 
-btn1.onclick = () =>{
-    setTimeout(() => {
-        window.location.assign("catalogodoclient.html");
-    }, 3000);
-}
-
-
+var emiallogado;
+femaillogado();
 
 
 
@@ -23,7 +18,8 @@ btn1.onclick = (evento)=>{
                                       {
                                         nome: nome.value,
                                         descricao: descricao.value,
-                                        foto: nomeArq
+                                        foto: nomeArq,
+                                        email: emiallogado
                                         }
                                      )
                         localStorage.setItem("catalogo", JSON.stringify(dados));
@@ -64,5 +60,14 @@ async function fenvio() {
         console.error(error);
         return false;
       }
+}
+
+function femaillogado(){
+  let dados = JSON.parse(sessionStorage.getItem("logado"));
+  if (dados == null){
+    window.location.assign("login.html");
+  }else{
+    emiallogado = dados[0].email;
+  }
 }
 

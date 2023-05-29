@@ -9,7 +9,14 @@ formulario.onsubmit = (eveto) =>{
     dados.forEach(elemento => {
         if(elemento.email === email.value && elemento.password === password.value){
             eveto.preventDefault();
-            mensagem.innerHTML="logado";
+            mensagem.innerHTML="Aguarde redirecionando...";
+            let dados = JSON.parse(sessionStorage.getItem("logado")) || [];
+            dados.push(
+                {
+                    email : email.value
+                }
+            )
+            sessionStorage.setItem("logado", JSON.stringify(dados));
             setTimeout(()=>{
                 window.location.assign("catalogodoclient.html");
             }, 3000)
