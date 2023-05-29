@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="catalogodoclient.css">
 </head>
 <body>
-    
+
     <div class="container">
         <header>
             <a href="http://127.0.0.1:5500/index.html"
@@ -22,29 +22,31 @@
             </nav>
         </header>
         <main>
-            <div class="cards">
-                <div class="card">
-                    <img src="/imagens/Rectangle 25.png" alt="">
-                    <div class="info">Editar ou Excluir</div>
-                </div>
-
-                <div class="card">
-                    <img src="/imagens/Rectangle 25.png" alt="">
-                    <div class="info">Editar ou Excluir</div>
-                </div>
-
-                <div class="card">
-                    <img src="/imagens/Rectangle 25.png" alt="">
-                    <div class="info">Editar ou Excluir</div>
-                </div>
-
-
-            </div>
-            <a href="cadsatrodeitem.html">Cadastre-se seu Título</a>
+            <div class="cards"></div>
+        <a href="cadsatrodeitem.html" id="cadastro">Cadastre-se seu Título</a>
         </main>
-
+        
+    <div class="cadmodal">
+        <div class="modal">
+        <form action="" id="formulario">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+            <label for="descricao">Descrição</label>
+            <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
+            <label for="foto">Foto</label>
+            <input type="file" name="foto" id="foto">
+            <button class="btncadastrar"> Cadastrar</button>
+            <button class="btneditar" id="botaomodal">Editar</button>
+            <input type="hidden" id="idalterar">
+            <button id="btnclose" name="btnclose" onclick="fechar()">Fechar</button>
+        </form>
+        
     </div>
     <script src="catalogoclient.js"></script>
 
 </body>
 </html>
+
+
+</div>
+</div>
