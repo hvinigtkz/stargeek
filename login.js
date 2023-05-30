@@ -24,7 +24,6 @@ formulario.onsubmit = (eveto) =>{
 
 
         } else{
-            mensagem.innerHTML ="Senha ou Email Incorreto";
             eveto.preventDefault();
         }
 
